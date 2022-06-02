@@ -1,7 +1,13 @@
+// start at 1:10:30
+// go over what parcel is
+// gotta reset the game after someone wins the game
 /* Selects the game container div so we can render the board in it */
 const board = document.querySelector(".game-container") as HTMLElement;
 
 const button = document.querySelector(`.button`) as HTMLElement;
+
+const winMessage = document.querySelector('.winner') as HTMLElement
+
 
 /* turn is alwasy one of these  */
 type Turn = "X" | "O" | "";
@@ -12,7 +18,7 @@ let turn: Turn = "X";
 /* Listens whenever a box on the board is clicked */
 function listenBoard(): void {
   board.addEventListener("click", runGame);
-  GamepadButton.addE
+  
 }
 
 /* main method */
@@ -46,6 +52,10 @@ function runGame(e: Event): void {
 function endGame(): void {
     board.removeEventListener('click', runGame);
     button.addEventListener('click', resetGame);
+    if(winMessage === null) return;
+    winMessage.textContent = `${turn} you won the game!`
+    winMessage.setAttribute('display', 'block');
+    button.style.visibility = 'visible';
 }
 
 

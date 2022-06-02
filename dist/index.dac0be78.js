@@ -1,9 +1,12 @@
+// start at 1:10:30
+// go over what parcel is
+// gotta reset the game after someone wins the game
 /* Selects the game container div so we can render the board in it */ const board = document.querySelector(".game-container");
 const button = document.querySelector(`.button`);
+const winMessage = document.querySelector(".winner");
 /* tracks whos turn is it */ let turn = "X";
 /* Listens whenever a box on the board is clicked */ function listenBoard() {
     board.addEventListener("click", runGame);
-    GamepadButton.addE;
 }
 /* main method */ function main() {
     createBoard();
@@ -22,6 +25,10 @@ const button = document.querySelector(`.button`);
 /* if there is a winner run this method to reset everything */ function endGame() {
     board.removeEventListener("click", runGame);
     button.addEventListener("click", resetGame);
+    if (winMessage === null) return;
+    winMessage.textContent = `${turn} you won the game!`;
+    winMessage.setAttribute("display", "block");
+    button.style.visibility = "visible";
 }
 function resetGame() {}
 function checkWinner() {

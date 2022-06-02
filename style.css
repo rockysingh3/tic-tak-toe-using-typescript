@@ -6,6 +6,11 @@ h1 {
     text-align: center;
 }
 
+
+.winner {
+    display: hidden;
+}
+
 .game-container {
     /* display: flex;
     justify-content: center;
