@@ -1,0 +1,39 @@
+body {
+    font-family: 'Londrina Shadow', cursive;
+}
+
+h1 {
+    text-align: center;
+}
+
+.game-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    gap: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box {
+    background-color: aquamarine;
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    font-weight: bold;
+    font-size: 40px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.button {
+    cursor: pointer;
+    visibility: hidden;
+}

@@ -1,0 +1,37 @@
+body {
+  font-family: Londrina Shadow, cursive;
+}
+
+h1 {
+  text-align: center;
+}
+
+.game-container {
+  cursor: pointer;
+  grid-template-columns: 75px 75px 75px;
+  justify-content: center;
+  gap: 20px;
+  display: grid;
+}
+
+.box {
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  background-color: #7fffd4;
+  font-size: 40px;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px #000;
+}
+
+.button-container {
+  justify-content: center;
+  display: flex;
+}
+
+.button {
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=index.d0d112bb.css.map */
